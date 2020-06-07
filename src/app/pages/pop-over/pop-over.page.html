@@ -1,0 +1,14 @@
+<app-header headerTitle="Popover" headerIcon='chatbox-outline'></app-header>
+
+<ion-content padding>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onClick($event)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-label>Item {{item}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

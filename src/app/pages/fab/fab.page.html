@@ -1,0 +1,58 @@
+<app-header headerTitle="Fabs" headerIcon='heart-circle-outline'></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="eye"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="flask"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="football"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="ice-cream"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="infinite"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="reorder-four" ></ion-icon>
+    </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="dark"><ion-icon name="eye"></ion-icon></ion-fab-button>
+    <ion-fab-button color="dark"><ion-icon name="flask"></ion-icon></ion-fab-button>
+    <ion-fab-button color="dark"><ion-icon name="football"></ion-icon></ion-fab-button>
+    <ion-fab-button color="dark"><ion-icon name="ice-cream"></ion-icon></ion-fab-button>
+    <ion-fab-button color="dark"><ion-icon name="infinite"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
+      <ion-fab-button color="primary"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button color="instagram"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      <ion-fab-button color="twitter"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button color="github"><ion-icon name="logo-github"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button color="youtube"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button color="primary"><ion-icon name="logo-linkedin"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      Item {{ item }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,51 @@
+<app-header headerTitle="Input Form" headerIcon='create'></app-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-header>
+      <ion-title>Hello {{name}}</ion-title>
+    </ion-header>
+    <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <form #form="ngForm" (ngSubmit)="onSubmitTemplate()" >
+      <ion-header>
+          <ion-toolbar [color]="form.valid ? 'success' : 'danger'">
+            <ion-title>Form template: Valid {{form.valid}}</ion-title>
+          </ion-toolbar>
+        </ion-header>
+      <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" 
+                    name="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    [(ngModel)]="user.email"
+                    required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" 
+                    name="Password"
+                    [(ngModel)]="user.password"
+                    required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" 
+                expand="block" 
+                [color]="form.valid ? 'success' : 'danger'"
+                shape="round"
+                [disabled]="form.invalid">
+      Submit
+    </ion-button>
+  </form>
+
+
+</ion-content>

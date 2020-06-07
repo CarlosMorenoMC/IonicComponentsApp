@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> {{firstName}} {{lastName}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()" slot="secondary" ion-button>
+        <ion-icon slot="start" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <form >
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input type="text" 
+                    name="firstNameInput"
+                    [(ngModel)]="hello"
+                    required></ion-input>
+                    <p>{{hello}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input type="text" 
+                    name="lastNameInput"
+                    [(ngModel)]="lastNameInput"
+                    required></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <ion-button (click)="save(firstName)"
+                expand="block" 
+                shape="round">
+      Save
+    </ion-button>
+</form>
+</ion-content>

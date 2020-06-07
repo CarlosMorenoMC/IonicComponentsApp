@@ -1,0 +1,37 @@
+<app-header headerTitle="List - Reorder" headerIcon='reorder-three'></app-header>
+
+<ion-content>
+  <ion-header class="ion-padding">
+    <ion-toolbar >
+      <ion-text slot="start">Who´s your favorite?</ion-text>
+      <ion-button (click)="toggleReorderGroup()" 
+                  color="warning" 
+                  shape="round" 
+                  slot="end"
+                  expand="full"
+                  fill="outline"
+                  *ngIf="isReorder ; else save">
+        Toggle
+      </ion-button>
+      <ng-template #save>
+        <ion-button (click)="toggleReorderGroup()" 
+                  color="warning" 
+                  shape="round" 
+                  slot="end"
+                  expand="full"
+                  >
+          Save
+          </ion-button>
+      </ng-template>
+      
+    </ion-toolbar>
+      
+  </ion-header>
+  <ion-reorder-group disabled="true" (ionItemReorder)="doReorder($event)">
+    <ion-item *ngFor="let heroe of heroes; let i = index">
+      <ion-label>{{ i + 1 }}  {{ heroe }}</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+
+</ion-content>

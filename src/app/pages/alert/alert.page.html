@@ -1,0 +1,41 @@
+
+<app-header [headerTitle]='[title] == "" ? "Alert" : [title]' headerIcon='alert-circle-outline'></app-header>
+      
+
+<ion-content class="ion-padding">
+  <ion-button (click)="presentAlert()"
+              expand="block"
+              color="primary">
+    Simple 
+  </ion-button>
+  <ion-button (click)="presentInput()"
+              expand="block"
+              color="secondary">
+    Input 
+  </ion-button>
+  <ion-button (click)="presentAlertMultipleButtons()"
+              expand="block"
+              color="dark">
+    Multiple Buttons 
+  </ion-button>
+  <ion-button (click)="presentAlertConfirm()"
+              expand="block"
+              color="success">
+    Confirm 
+  </ion-button>
+  <ion-button (click)="presentAlertPrompt()"
+              expand="block"
+              color="warning">
+    Form 
+  </ion-button>
+  <ion-button (click)="presentAlertRadio()"
+              expand="block"
+              color="danger">
+    Check Radio Form 
+  </ion-button>
+  <ion-button (click)="presentAlertCheckbox()"
+              expand="block"
+              color="medium">
+    CheckBox Form 
+  </ion-button>
+</ion-content>
