@@ -83,6 +83,31 @@
       "icon": "speedometer-outline",
       "name": "Progress bar",
       "redirectTo": "/progress-bar"
+    },
+    {
+      "icon": "sync-outline",
+      "name": "Refresher",
+      "redirectTo": "/refresher"
+    },
+    {
+      "icon": "search-circle-outline",
+      "name": "Searchbar",
+      "redirectTo": "/searchbar"
+    },
+    {
+      "icon": "copy-outline",
+      "name": "Segment",
+      "redirectTo": "/segment"
+    },
+    {
+      "icon": "skull-outline",
+      "name": "Skeleton text",
+      "redirectTo": "/skeleton-text"
+    },
+    {
+      "icon": "ellipsis-horizontal-circle-outline",
+      "name": "Slides",
+      "redirectTo": "/slides"
     }
   ]
   

@@ -33,7 +33,6 @@ async ionViewWillEnter(){
   this.dataService.getUsers().subscribe( 
     res=>{
     this.loading.dismiss();
-    console.log(res)
     },
     err => {
       this.loading.dismiss();
