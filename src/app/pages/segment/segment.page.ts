@@ -19,7 +19,6 @@ export class SegmentPage implements OnInit {
       res => {
         Object.values(res).map( item => {
           this.superheros.push(item)
-          console.log(this.superheros)
         })
       }
     )

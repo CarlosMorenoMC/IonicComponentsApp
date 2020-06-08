@@ -20,11 +20,6 @@
       "redirectTo": "/buttons"
     },
     {
-      "icon": "card",
-      "name": "Cards",
-      "redirectTo": "/card"
-    },
-    {
       "icon": "checkmark-circle-outline",
       "name": "Checkbox",
       "redirectTo": "/check"
@@ -108,6 +103,16 @@
       "icon": "ellipsis-horizontal-circle-outline",
       "name": "Slides",
       "redirectTo": "/slides"
+    },
+    {
+      "icon": "cog",
+      "name": "Tabs",
+      "redirectTo": "/tabs/account"
+    },
+    {
+      "icon": "cafe",
+      "name": "Toast",
+      "redirectTo": "/toast"
     }
   ]
   

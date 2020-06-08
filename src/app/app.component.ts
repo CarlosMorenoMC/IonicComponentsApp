@@ -31,7 +31,6 @@ export class AppComponent {
     this.dataService.getMenuOptions().subscribe(
       res=> {
         Object.values(res).map( item => {
-          console.log(item)
           this.components.push(item)
         })
       }
