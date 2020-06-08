@@ -1,0 +1,15 @@
+<app-header headerTitle="Searchbar" headerIcon='search-circle-outline'></app-header>
+
+
+<ion-content class="ion-padding">
+  
+  <ion-searchbar color="secondary" 
+                animated
+                (ionChange)="search($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item  *ngFor="let album of albums | filter: searchInput: 'title'">
+        <ion-label>{{ album.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

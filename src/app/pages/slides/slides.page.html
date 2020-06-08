@@ -1,0 +1,20 @@
+<app-header headerTitle="Slides" headerIcon='ellipsis-horizontal-circle-outline'></app-header>
+
+<ion-content>
+  <ion-slides pager="true" 
+        class="slide-full">
+    <ion-slide *ngFor="let slide of slides">
+      <ion-card mode="ios">
+        <img [src]="slide.img" class="slide-image"/>
+        <ion-card-header>
+          <ion-card-title>
+            {{ slide.title }}
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ slide.desc }}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

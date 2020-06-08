@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Observable } from 'rxjs';
-import { IonList, LoadingController } from '@ionic/angular';
+import { IonList, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-list',
@@ -16,7 +16,9 @@ export class ListPage implements OnInit {
   loading: any;
   error: any;
 
-  constructor(private dataService: DataService, public loadingController: LoadingController) { 
+  constructor(private dataService: DataService, 
+              public loadingController: LoadingController,
+              public toastCtrl: ToastController) { 
     this.loading = this.loadingController.create();
   }
 
@@ -33,7 +35,6 @@ async ionViewWillEnter(){
   this.dataService.getUsers().subscribe( 
     res=>{
     this.loading.dismiss();
-    console.log(res)
     },
     err => {
       this.loading.dismiss();
@@ -46,24 +47,33 @@ async ionViewWillEnter(){
 }
 
   ngOnInit() {
-    
-    console.log(this.users)
   }
 
   favorite(user){ 
-    alert("Fav " + user.name) 
-    console.log(this.users)
+    let msg = 'Favorite ' + user.name;
+    this.presentToast(msg)
     this.list.closeSlidingItems;
   }
 
   call(user){ 
-    alert("Call " + user.name)
+    let msg = 'Call ' + user.name;
+    this.presentToast(msg)
     this.list.closeSlidingItems;
   }
 
   remove(user){ 
-    alert("Remove " + user.name)  
+    let msg = 'Remove ' + user.name;
+    this.presentToast(msg)
     this.list.closeSlidingItems;
   }
+
+  async presentToast (message : string) {
+    const toast = await this.toastCtrl.create({
+      message,
+      duration: 2000
+    })
+    toast.present();
+  }
+
 
 }

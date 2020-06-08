@@ -1,0 +1,33 @@
+<app-header headerTitle="Skeleton text" headerIcon='skull-outline'></app-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let item of superheros "
+              class="animate__animated animate__fadeIn">
+      <ion-label>
+        <h2>{{ item.superhero }} <small>{{ item.alter_ego}}</small></h2>
+        <p>{{ item.first_appearance}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-right">
+        {{ item.publisher}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="superheros.length === 0">
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1]">
+      <ion-label>
+        <h2>
+          <ion-skeleton-text animated style="width: 150px"></ion-skeleton-text>
+        </h2>
+        <p>
+          <ion-skeleton-text animated style="width: 150px"></ion-skeleton-text>
+        </p>
+      </ion-label>
+      <ion-label slot="end">
+        <ion-skeleton-text animated 
+                          style="width: 150px; float: right" text-right></ion-skeleton-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
