@@ -1,6 +1,6 @@
 # IonicComponentsApp
 
-IonicComponentsApp es una aplicación móvil creada para probar y tener ejemplos de todos los componentes de Ionic.
+IonicComponentsApp es una aplicación para dispositivos Android creada para probar y tener ejemplos de todos los componentes de Ionic.
 
 <img src="https://github.com/CarlosMorenoMC/wiki_images/blob/main/ionicComponentsApp-portada.jpeg" width="200">
 
